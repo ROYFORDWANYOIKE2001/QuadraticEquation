@@ -1,0 +1,33 @@
+import javax.swing.JOptionPane;
+public class QuadraticEquation {
+	    public static void main(String[] args) {
+	        double a, b, c, root1, root2, discriminant;
+	        String s1,s2,s3;
+	        s1=JOptionPane.showInputDialog("Enter a: ");
+	        a=Double.parseDouble(s1);
+	        s2=JOptionPane.showInputDialog("Enter b: ");
+	        b=Double.parseDouble(s2);
+	        s3=JOptionPane.showInputDialog("Enter c: ");
+	        c=Double.parseDouble(s3);          
+	        discriminant=(Math.pow(b,2)) - (4*a*c);
+	        if(discriminant==0.0) {
+	            root1=(-b+Math.sqrt(discriminant))/(2*a);
+	            JOptionPane.showMessageDialog(null, String.format("There is one root at: %.4fnn", root1), "Roots:", JOptionPane.INFORMATION_MESSAGE);
+	        }
+	        else {
+	            if(discriminant>0.0) {        
+	                root1=(-b+Math.sqrt(discriminant))/(2*a);
+	                root2=(-b-Math.sqrt(discriminant))/(2*a);
+	                JOptionPane.showMessageDialog(null, String.format("There are two real roots at: %.4f and %.4fnn", root1, root2), "Roots:", JOptionPane.INFORMATION_MESSAGE);
+	            }
+	            else {
+	                if(discriminant<0.0) {    
+	                    root1=(-b+Math.sqrt(-discriminant))/(2*a);
+	                    root2=(-b+Math.sqrt(-discriminant))/(2*a);
+	                    JOptionPane.showMessageDialog(null, String.format("There are two are no real roots at: %.4fi and %.4finn", root1, root2), "Roots:", JOptionPane.INFORMATION_MESSAGE);
+	                }
+                    }
+                }
+            }
+}
+           
